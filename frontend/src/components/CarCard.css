@@ -1,0 +1,262 @@
+/* CarCard Component Styles */
+.car-card-wrapper {
+  height: 100%;
+}
+
+.car-card {
+  display: block;
+  background: #1E1E1E;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #FFFFFF;
+  border: 1px solid #333333;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.car-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.car-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.car-card:hover .car-image img {
+  transform: scale(1.05);
+}
+
+.car-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.new-badge {
+  background-color: var(--primary-main);
+  color: white;
+}
+
+.car-info {
+  padding: 1.5rem;
+}
+
+.car-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 0.5rem 0;
+}
+
+.car-year {
+  font-size: 0.875rem;
+  color: #BBBBBB;
+  margin: 0 0 0.75rem 0;
+}
+
+.car-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1E90FF;
+  margin: 0 0 1rem 0;
+}
+
+.car-specs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #BBBBBB;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 500;
+}
+
+.spec-icon {
+  color: #0047AB;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 768px) {
+  .car-image {
+    height: 160px;
+  }
+
+  .car-info {
+    padding: 1rem;
+  }
+
+  .car-title {
+    font-size: 1.125rem;
+  }
+
+  .car-price {
+    font-size: 1.25rem;
+  }
+}
+
+/* Certified Badge */
+.certified-badge-container {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+}
+
+.certified-badge {
+  background-color: #0047AB !important;
+  font-weight: 500 !important;
+  font-size: 0.75rem !important;
+  color: white !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+.badge-icon {
+  color: white;
+}
+
+/* Action Buttons */
+.action-buttons {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-button {
+  background-color: #333333 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
+.action-button:hover {
+  color: var(--primary) !important;
+}
+
+.favorite-active {
+  color: #1E90FF;
+}
+
+.compare-active {
+  color: #0047AB;
+}
+
+/* Price Tag */
+.price-tag {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+}
+
+.rupee-icon {
+  margin-right: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.emi {
+  font-size: 0.75rem !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Car Details */
+.car-details {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-title-container {
+  margin-bottom: 0.75rem;
+}
+
+.car-location {
+  font-size: 0.75rem !important;
+  color: #BBBBBB !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.location-icon {
+  margin-right: 0.25rem;
+}
+
+/* Fuel type pills */
+.fuel-type-pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Fuel type colors - using Blue and Black theme */
+.fuel-type-petrol {
+  background-color: #1E90FF !important; /* Dodger blue */
+  color: #FFFFFF !important; /* White text */
+}
+
+.fuel-type-diesel {
+  background-color: #00008B !important; /* Dark blue */
+  color: #FFFFFF !important; /* White text */
+}
+
+.fuel-type-electric {
+  background-color: #0047AB !important; /* Cobalt blue */
+  color: #FFFFFF !important; /* White text */
+}
+
+.fuel-type-hybrid {
+  background-color: #4169E1 !important; /* Royal blue */
+  color: #FFFFFF !important; /* White text */
+}
+
+.fuel-type-cng {
+  background-color: #000080 !important; /* Navy blue */
+  color: #FFFFFF !important; /* White text */
+}
+
+.fuel-type-default {
+  background-color: #333333 !important; /* Dark gray */
+  color: #FFFFFF !important; /* White text */
+}
+
+.view-details-link {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.view-details-link:hover {
+  text-decoration: underline;
+}

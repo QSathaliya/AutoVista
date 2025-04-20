@@ -1,0 +1,29 @@
+/* Global input text color fix */
+input, 
+textarea, 
+select {
+  color: #000000 !important; /* Force black text in all inputs */
+}
+
+/* Make sure placeholder text is visible */
+::placeholder {
+  color: #666666 !important;
+  opacity: 1;
+}
+
+/* Ensure text in password fields is also black */
+input[type="password"] {
+  color: #000000 !important;
+}
+
+/* Fix for input in any themed areas */
+.admin-container input,
+.admin-container textarea,
+.admin-container select,
+.login-form input,
+.register-form input,
+.car-form input,
+.car-form textarea,
+.car-form select {
+  color: #000000 !important;
+}
